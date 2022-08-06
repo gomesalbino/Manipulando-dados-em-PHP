@@ -4,8 +4,6 @@
 
 require_once "funcoes.php";
 
-
-
 function sacar( array $conta, float $valorASacar) : array
 {
 
@@ -26,7 +24,11 @@ function exibeMensagem( string $menssagem)
 function depositarValor(array $conta, float $valorAdepositar): array
 {
     if($valorAdepositar < 0){
+
         exibeMensagem("Só pode depositar os valores positivos!");
+
+        exibeMensagem("Só pode depositar os valores positivo!");
+
     }else{
         $conta["saldo"] += $valorAdepositar;
     }
@@ -44,7 +46,11 @@ $clientesDoBanco = [
     ], 
      "5552224423" => [
 
+
          "titular" => "João Perreira",
+
+         "titular" => "João dos santos Perreira",
+
 
          "titular" => "João dos santos Perreira",
 
@@ -81,6 +87,17 @@ $clientesDoBanco = [
 //     exibeConta($conta ) ;
 // }
 // echo "</ul>";
+// $clientesDoBanco["255666666"] = sacar($clientesDoBanco["255666666"], 750);
+// $clientesDoBanco["5552224423"] = sacar($clientesDoBanco["5552224423"], 600);
+
+// foreach($clientesDoBanco as $cpf => $conta){
+//     exibeMensagem("Cpf: " . $cpf . " ==> " . $conta["titular"] . " " . "Saldo: " .$conta["saldo"]) ;
+// }
+
+
+// foreach($clientesDoBanco as $cpf => $conta){
+//     exibeMensagem("Cpf: " . $cpf . " ==> " . $conta["titular"] . " " . "Saldo: " .$conta["saldo"]) ;
+// }
 
 ?>
 
@@ -111,10 +128,4 @@ $clientesDoBanco = [
 
 
 
- $clientesDoBanco["255666666"] = sacar($clientesDoBanco["255666666"], 750);
- $clientesDoBanco["5552224423"] = sacar($clientesDoBanco["5552224423"], 600);
-
- foreach($clientesDoBanco as $cpf => $conta){
-     exibeMensagem("Cpf: " . $cpf . " ==> " . $conta["titular"] . " " . "Saldo: " .$conta["saldo"]) ;
- }
 
